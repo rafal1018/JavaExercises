@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ChallengeTest {
+public class SevenBoomTest {
 
     @ParameterizedTest
     @MethodSource("streamOfArraysForTestPass")
     void shouldReturnBoom(int[] arg) {
         //given
         //when
-        String result = Challenge.sevenBoom(arg);
+        String result = SevenBoom.sevenBoom(arg);
 
         //then
         assertThat(result, equalTo("Boom!"));
@@ -27,7 +27,7 @@ public class ChallengeTest {
     void shouldReturnFail(int[] arg) {
         //given
         //when
-        String result = Challenge.sevenBoom(arg);
+        String result = SevenBoom.sevenBoom(arg);
 
         //then
         assertThat(result, equalTo("there is no 7 in the array"));
